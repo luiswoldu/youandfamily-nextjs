@@ -2,15 +2,12 @@
 
 import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
+import { useTranslation } from "@/lib/i18n"
 
-const subjectOptions = [
-  { value: "bewerbung", label: "Bewerbung" },
-  { value: "frage", label: "Frage" },
-  { value: "spende", label: "Spende" },
-  { value: "anderes", label: "Anderes" },
-]
+const subjectKeys = ["application", "question", "donation", "other"] as const
 
 export function ContactSection() {
+  const { t } = useTranslation()
   const sectionRef = useRef<HTMLElement | null>(null)
   const [progress, setProgress] = useState(0)
   const [form, setForm] = useState({
@@ -135,12 +132,10 @@ export function ContactSection() {
       <div className="max-w-3xl mx-auto flex flex-col gap-10 relative z-10">
         <div className="flex flex-col gap-4">
           <h2 className="text-5xl md:text-7xl font-bold font-sans text-foreground text-balance">
-            Schreib uns. Wir schauen gemeinsam, was möglich ist.
+            {t("contact_home.title")}
           </h2>
           <p className="text-2xl font-sans text-foreground leading-relaxed text-pretty">
-            Du weißt noch nicht, ob du die Voraussetzungen erfüllst? Schreib uns trotzdem. Kein
-            komplizierter Papierkram, kein Verhör. Nur eine kurze Nachricht — und wir melden uns
-            bei dir.
+            {t("contact_home.text")}
           </p>
         </div>
 
@@ -149,9 +144,9 @@ export function ContactSection() {
             className="rounded-2xl p-10 text-center flex flex-col gap-3"
             style={{ backgroundColor: "#f3effc" }}
           >
-            <p className="text-3xl font-bold font-sans text-foreground">Danke!</p>
+            <p className="text-3xl font-bold font-sans text-foreground">{t("contact_home.form.success_title")}</p>
             <p className="text-xl font-sans text-foreground">
-              Deine Nachricht ist bei uns angekommen. Wir melden uns bald.
+              {t("contact_home.form.success_text")}
             </p>
           </div>
         ) : (
@@ -159,7 +154,7 @@ export function ContactSection() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               <div className="flex flex-col gap-2">
                 <label htmlFor="name" className="text-base font-semibold font-sans text-foreground">
-                  Name
+                  {t("contact_home.form.name.label")}
                 </label>
                 <input
                   id="name"
@@ -168,13 +163,13 @@ export function ContactSection() {
                   required
                   value={form.name}
                   onChange={handleChange}
-                  placeholder="Dein Name"
+                  placeholder={t("contact_home.form.name.placeholder")}
                   className="rounded-xl border border-border px-4 py-3 text-base font-sans bg-background text-foreground placeholder:text-foreground/40 focus:outline-none focus:ring-2 focus:ring-ring"
                 />
               </div>
               <div className="flex flex-col gap-2">
                 <label htmlFor="email" className="text-base font-semibold font-sans text-foreground">
-                  E-Mail
+                  {t("contact_home.form.email.label")}
                 </label>
                 <input
                   id="email"
@@ -183,7 +178,7 @@ export function ContactSection() {
                   required
                   value={form.email}
                   onChange={handleChange}
-                  placeholder="deine@email.de"
+                  placeholder={t("contact_home.form.email.placeholder")}
                   className="rounded-xl border border-border px-4 py-3 text-base font-sans bg-background text-foreground placeholder:text-foreground/40 focus:outline-none focus:ring-2 focus:ring-ring"
                 />
               </div>
@@ -191,7 +186,7 @@ export function ContactSection() {
 
             <div className="flex flex-col gap-2">
               <label htmlFor="subject" className="text-base font-semibold font-sans text-foreground">
-                Betreff
+                {t("contact_home.form.subject.label")}
               </label>
               <select
                 id="subject"
@@ -202,11 +197,11 @@ export function ContactSection() {
                 className="rounded-xl border border-border px-4 py-3 text-base font-sans bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
               >
                 <option value="" disabled>
-                  Bitte wählen
+                  {t("contact_home.form.subject.default")}
                 </option>
-                {subjectOptions.map((opt) => (
-                  <option key={opt.value} value={opt.value}>
-                    {opt.label}
+                {subjectKeys.map((key) => (
+                  <option key={key} value={key}>
+                    {t(`contact_home.form.subject.options.${key}`)}
                   </option>
                 ))}
               </select>
@@ -214,7 +209,7 @@ export function ContactSection() {
 
             <div className="flex flex-col gap-2">
               <label htmlFor="message" className="text-base font-semibold font-sans text-foreground">
-                Nachricht
+                {t("contact_home.form.message.label")}
               </label>
               <textarea
                 id="message"
@@ -223,7 +218,7 @@ export function ContactSection() {
                 rows={5}
                 value={form.message}
                 onChange={handleChange}
-                placeholder="Was möchtest du uns mitteilen?"
+                placeholder={t("contact_home.form.message.placeholder")}
                 className="rounded-xl border border-border px-4 py-3 text-base font-sans bg-background text-foreground placeholder:text-foreground/40 focus:outline-none focus:ring-2 focus:ring-ring resize-none"
               />
             </div>
@@ -234,7 +229,7 @@ export function ContactSection() {
               className="w-fit px-8 py-4 rounded-full text-xl font-semibold font-sans transition-opacity hover:opacity-80 disabled:opacity-50"
               style={{ backgroundColor: "#a477ff", color: "#ffffff" }}
             >
-              {status === "sending" ? "Wird gesendet..." : "Nachricht senden"}
+              {status === "sending" ? t("contact_home.form.sending") : t("contact_home.form.submit")}
             </button>
           </form>
         )}

@@ -1,0 +1,159 @@
+{
+  "metadata": {
+    "title": "You&Family — Birlikte zaman geçirmek lüks değil",
+    "description": "Almanya'daki ailelerin şu an mümkün görünmese bile birlikte tatile çıkmasına destek oluyoruz."
+  },
+  "navbar": {
+    "items": {
+      "what_we_do": "Ne yapıyoruz",
+      "mission": "Misyon",
+      "stories": "Aile hikayeleri",
+      "contact": "İletişim"
+    },
+    "donate": "Bağış yap",
+    "open_menu": "Menüyü aç"
+  },
+  "languages": {
+    "de": "Deutsch",
+    "en": "English",
+    "tr": "Türkçe",
+    "ar": "العربية"
+  },
+  "hero": {
+    "h1": "Ailen birlikte zaman geçirmeyi hak ediyor.",
+    "subline": "Almanya'daki ailelerin şu an mümkün görünmese bile birlikte tatile çıkmasına destek oluyoruz. Başvur, birlikte nasıl yardımcı olabileceğimize bakalım.",
+    "buttons": {
+      "apply": "Hemen başvur",
+      "donate": "Bağış yap"
+    },
+    "image_alt": "Tatilde mutlu bir aile — çocuklar ve ebeveynler pitoresk bir kasabada yürüyor"
+  },
+  "numbers": {
+    "stats": [
+      { "value": "2,8 Milyon", "label": "Almanya'da yoksulluk içinde yaşayan çocuk" },
+      { "value": "5'te 1", "label": "Aile tatil masraflarını karşılayamıyor" },
+      { "value": "%67", "label": "Düşük gelirli ailelerin yüksek stres yaşadığı bildiriliyor" },
+      { "value": "%89", "label": "Birlikte geçirilen zamanın ruh sağlığını iyileştirdiğini söylüyor" }
+    ]
+  },
+  "what_we_do": {
+    "title": "Ailelere nasıl yardım ediyoruz.",
+    "subline": "Üç temel — tek hedef.",
+    "pillars": {
+      "funded_vacations": {
+        "micro": "DESTEKLİ TATİL",
+        "headline": "Endişelenmeden seyahat et.",
+        "text": "Konaklama, ulaşım ve aktivite masraflarını tamamen biz karşılıyoruz — gizli koşul yok."
+      },
+      "personal_support": {
+        "micro": "AİLE DESTEĞİ",
+        "headline": "Bir tatilden fazlası.",
+        "text": "Seni danışmanlık hizmetleri ve yaşadıklarını anlayan bir toplulukla buluşturuyoruz."
+      },
+      "lasting_network": {
+        "micro": "ORTAK AĞI",
+        "headline": "Kendinizi iyi hissedeceğiniz yerler.",
+        "text": "Almanya genelinde 50'den fazla otel ve tatil bölgesi — aileni gerçekten karşılamak için seçildi."
+      }
+    }
+  },
+  "mission": {
+    "title": "Birlikte zaman geçirmek lüks değil. Bu sana ait.",
+    "text": "Tatil, gittiğin yerle ilgili değildir. Kimsenin acele etmediği o kahvaltıyla ilgilidir. Göl kenarındaki akşamla. Nedensiz kahkahalarla. Bu anlar aileni şekillendirir — ve bunlar hesabında ne kadar para olduğuna bağlı olmamalı.\n\nYou&Family'nin arkasında, birlikte geçirilen zamanın ne anlama geldiğini bizzat bilen anneler, babalar ve çocuklar var. Bir haftanın her şeyi değiştirebileceğini bilen insanlar. Tam da bu yüzden yapıyoruz bunu.",
+    "image_alt": "Sanatsal bir çerçeveyle doğada aile"
+  },
+  "stories": {
+    "title": "Diğer aileler ne diyor.",
+    "subline": "Senin gibi ailelerin gerçek hikayeleri — haftaları neler değiştirdi ve eve ne götürdüler.",
+    "items": [
+      {
+        "quote": "Yıllardır birlikte tatile çıkmamıştık. O hafta bizi bir aile olarak yeniden bir araya getirdi. Çocuklar hâlâ bundan bahsediyor.",
+        "name": "Yılmaz ailesi",
+        "location": "Hamburg"
+      },
+      {
+        "quote": "Böyle bir şeyin mümkün olabileceğini hiç düşünmemiştim. Organizasyon mükemmeldi ve tüm süreç boyunca desteklendiğimizi hissettik. Gerçek bir hediye.",
+        "name": "Meier ailesi",
+        "location": "Berlin"
+      },
+      {
+        "quote": "Yalnız bir anne olarak tatil yapmak sadece bir hayaldi. Şimdi gerçek oldu. Kızım denizi ilk kez gördü.",
+        "name": "Sara K.",
+        "location": "Münih"
+      }
+    ]
+  },
+  "contact_home": {
+    "title": "Bize yaz. Birlikte ne mümkün bakalım.",
+    "text": "Koşulları karşılayıp karşılamadığından emin değil misin? Yine de yaz bize. Karmaşık evrak yok, sorgu yok. Sadece kısa bir mesaj — biz sana geri döneriz.",
+    "form": {
+      "name": { "label": "Ad", "placeholder": "Adın" },
+      "email": { "label": "E-posta", "placeholder": "eposta@adresin.com" },
+      "subject": {
+        "label": "Konu nedir?",
+        "default": "Lütfen seçin",
+        "options": {
+          "application": "Başvuru",
+          "question": "Soru",
+          "donation": "Bağış",
+          "other": "Diğer"
+        }
+      },
+      "message": { "label": "Mesaj", "placeholder": "Bize ne söylemek istersin?" },
+      "submit": "Mesaj gönder",
+      "sending": "Gönderiliyor…",
+      "success_title": "Teşekkürler!",
+      "success_text": "Mesajın bize ulaştı. En kısa sürede geri döneceğiz."
+    }
+  },
+  "donate_page": {
+    "back": "Geri",
+    "title": "Bir ailenin tatile çıkmasına katkıda bulunabilirsin.",
+    "intro": "You&Family, birlikte geçirilen zamanın ne anlama geldiğini bizzat bilen insanlar tarafından kuruldu — anneler, babalar, aileler. Daha yeni başlıyoruz ama şuna inanıyoruz: Yanımızda doğru insanlarla bunu gerçekten başarabiliriz. İster bağış ister zamanınla dahil olmak istersen — bize ulaş.",
+    "image_alt": "Sanatsal bir çerçeveyle doğada aile",
+    "paths": {
+      "donate": {
+        "title": "Bağış",
+        "text": "Her katkı gerçek bir şeyi mümkün kılar. Bağışın doğrudan aile tatillerinin finansmanına gidiyor. Ne olduğu konusunda her zaman şeffafız."
+      },
+      "volunteer": {
+        "title": "Gönüllülük",
+        "text": "Para değil ama zaman mı var? Bu da sayılır. Ailelere eşlik edebilecek, danışmanlık yapabilecek ya da sadece dinleyebilecek insanlar arıyoruz. Uzman olman gerekmiyor — sadece orada olmak istemen yeterli."
+      }
+    },
+    "contact": {
+      "title": "Bize yaz — geri döneceğiz.",
+      "form": {
+        "name": { "label": "Ad", "placeholder": "Adın" },
+        "email": { "label": "E-posta", "placeholder": "eposta@adresin.com" },
+        "subject": {
+          "label": "Ne yapmak istiyorum?",
+          "default": "Lütfen seçin",
+          "options": {
+            "donation": "Bağış",
+            "volunteer": "Gönüllü olmak",
+            "question": "Daha fazla bilgi",
+            "other": "Diğer"
+          }
+        },
+        "message": { "label": "Mesaj", "placeholder": "Bize ne söylemek istersin?" },
+        "submit": "Mesaj gönder",
+        "sending": "Gönderiliyor…",
+        "success_title": "Teşekkürler!",
+        "success_text": "Mesajın bize ulaştı. En kısa sürede geri döneceğiz."
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Birlikte zaman geçirmek lüks değil.",
+    "email": "info@youandfamily.de",
+    "nav": {
+      "numbers": "Rakamlar",
+      "what_we_do": "Ne yapıyoruz",
+      "mission": "Misyon",
+      "stories": "Aile hikayeleri",
+      "contact": "İletişim"
+    },
+    "copyright": "You&Family e.V."
+  }
+}

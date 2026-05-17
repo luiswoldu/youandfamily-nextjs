@@ -2,15 +2,13 @@
 
 import Image from "next/image"
 import { useEffect, useRef, useState } from "react"
+import { useTranslation } from "@/lib/i18n"
 
-const stats = [
-  { value: "320+", description: "Familien unterstützt" },
-  { value: "12", description: "Partnerkommunen" },
-  { value: "98%", description: "würden es weiterempfehlen" },
-  { value: "2.8M", description: "Kinder in Deutschland leben in Armut" },
-]
+type Stat = { value: string; label: string }
 
 export function NumbersSection() {
+  const { t } = useTranslation()
+  const stats = t<Stat[]>("numbers.stats")
   const sectionRef = useRef<HTMLElement | null>(null)
   const [progress, setProgress] = useState(0)
 
@@ -124,12 +122,12 @@ export function NumbersSection() {
         <div className="rounded-3xl p-10 md:p-16" style={{ backgroundColor: "#fbf7f5" }}>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
             {stats.map((stat) => (
-              <div key={stat.value} className="flex flex-col items-center text-center gap-2">
+              <div key={stat.label} className="flex flex-col items-center text-center gap-2">
                 <span className="text-6xl md:text-7xl font-bold font-sans text-foreground">
                   {stat.value}
                 </span>
                 <span className="text-xl font-sans text-foreground leading-relaxed">
-                  {stat.description}
+                  {stat.label}
                 </span>
               </div>
             ))}

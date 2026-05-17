@@ -2,8 +2,10 @@
 
 import Image from "next/image"
 import { useEffect, useRef, useState } from "react"
+import { useTranslation } from "@/lib/i18n"
 
 export function MissionSection() {
+  const { t } = useTranslation()
   const [isVisible, setIsVisible] = useState(false)
   const sectionRef = useRef<HTMLElement | null>(null)
 
@@ -37,7 +39,7 @@ export function MissionSection() {
     >
       <div className="max-w-6xl mx-auto w-full flex flex-col gap-12 relative z-10">
         <h2 className="text-6xl md:text-7xl font-bold font-sans text-foreground text-balance">
-          Gemeinsame Zeit ist kein Luxus. Sie gehört dir.
+          {t("mission.title")}
         </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
@@ -56,7 +58,7 @@ export function MissionSection() {
             />
             <Image
               src="/images/IMAGE_4.png"
-              alt="Familie in der Natur mit künstlerischem Rahmen"
+              alt={t("mission.image_alt")}
               width={720}
               height={500}
               className="relative z-10 w-full max-w-none h-auto object-contain"
@@ -69,7 +71,7 @@ export function MissionSection() {
             }`}
             style={{ transitionDelay: "1800ms" }}
           >
-            Jede Familie verdient Erholung, Verbindung und Erinnerungen — unabhängig vom Kontostand. Wir glauben daran, dass gemeinsame Erlebnisse das Fundament einer starken Familie bilden. Deshalb machen wir Urlaub möglich, für alle.
+            {t("mission.text")}
           </p>
         </div>
       </div>

@@ -3,8 +3,10 @@
 import Link from "next/link"
 import Image from "next/image"
 import { useEffect, useState } from "react"
+import { useTranslation } from "@/lib/i18n"
 
 export function HeroSection() {
+  const { t } = useTranslation()
   const [scrollY, setScrollY] = useState(0)
   const [isTextVisible, setIsTextVisible] = useState(false)
 
@@ -42,10 +44,10 @@ export function HeroSection() {
           }`}
         >
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-sans leading-tighter text-balance text-foreground">
-            Deine Familie verdient Zeit zusammen
+            {t("hero.h1")}
           </h1>
           <p className="text-xl md:text-2xl font-sans text-foreground max-w-xl leading-tight text-pretty">
-            Wir unterstützen Familien in Deutschland dabei, gemeinsam Urlaub zu machen — auch wenn das gerade nicht möglich scheint. Bewirb dich und lass uns schauen, wie wir helfen können.
+            {t("hero.subline")}
           </p>
           <div className="flex flex-col sm:flex-row items-center lg:items-start gap-4 mt-2">
             <button
@@ -53,14 +55,14 @@ export function HeroSection() {
               className="px-8 py-4 rounded-full text-xl font-semibold font-sans transition-opacity hover:opacity-80"
               style={{ backgroundColor: "#a477ff", color: "#ffffff" }}
             >
-              Jetzt bewerben
+              {t("hero.buttons.apply")}
             </button>
             <Link
               href="/donate"
               className="px-8 py-4 rounded-full text-xl font-semibold font-sans transition-opacity hover:opacity-80"
               style={{ backgroundColor: "#ffffff", color: "#000000" }}
             >
-              Spenden
+              {t("hero.buttons.donate")}
             </Link>
           </div>
         </div>
@@ -92,7 +94,7 @@ export function HeroSection() {
           <div className="transition-transform duration-300 ease-out" style={{ transform: `scale(${imageScale})` }}>
             <Image
               src="/images/IMAGE_7.png"
-              alt="Eine glückliche Familie auf Urlaub - Kinder und Eltern spazieren durch eine malerische Stadt"
+              alt={t("hero.image_alt")}
               width={1200}
               height={1000}
               className="w-full max-w-md sm:max-w-lg lg:max-w-none h-auto object-cover"

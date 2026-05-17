@@ -1,0 +1,159 @@
+{
+  "metadata": {
+    "title": "You&Family — Gemeinsame Zeit ist kein Luxus",
+    "description": "Wir unterstützen Familien in Deutschland dabei, gemeinsam Urlaub zu machen — auch wenn das gerade nicht möglich scheint."
+  },
+  "navbar": {
+    "items": {
+      "what_we_do": "Was wir tun",
+      "mission": "Mission",
+      "stories": "Familiengeschichten",
+      "contact": "Kontakt"
+    },
+    "donate": "Spenden",
+    "open_menu": "Menü öffnen"
+  },
+  "languages": {
+    "de": "Deutsch",
+    "en": "English",
+    "tr": "Türkçe",
+    "ar": "العربية"
+  },
+  "hero": {
+    "h1": "Deine Familie verdient Zeit zusammen.",
+    "subline": "Wir unterstützen Familien in Deutschland dabei, gemeinsam Urlaub zu machen — auch wenn das gerade nicht möglich scheint. Bewirb dich und lass uns schauen, wie wir helfen können.",
+    "buttons": {
+      "apply": "Jetzt bewerben",
+      "donate": "Spenden"
+    },
+    "image_alt": "Eine glückliche Familie im Urlaub — Kinder und Eltern spazieren durch eine malerische Stadt"
+  },
+  "numbers": {
+    "stats": [
+      { "value": "350+", "label": "Familien unterstützt" },
+      { "value": "15%", "label": "Familien kann sich keinen Urlaub leisten" },
+      { "value": "67 %", "label": "Einkommensschwache Familien berichten von hohem Stress" },
+      { "value": "2.8M", "label": "Kinder in Deutschland leben in Armut" }
+    ]
+  },
+  "what_we_do": {
+    "title": "Wie wir Familien helfen.",
+    "subline": "Drei Bausteine — ein Ziel.",
+    "pillars": {
+      "funded_vacations": {
+        "micro": "GEFÖRDERTER URLAUB",
+        "headline": "Reisen, ohne dir Sorgen zu machen.",
+        "text": "Wir übernehmen die Kosten für Unterkunft, Anreise und Aktivitäten — komplett, ohne versteckte Bedingungen."
+      },
+      "personal_support": {
+        "micro": "FAMILIEN-UNTERSTÜTZUNG",
+        "headline": "Mehr als ein Urlaub.",
+        "text": "Wir verbinden dich mit Beratungsangeboten und einer Gemeinschaft, die versteht, was du durchmachst."
+      },
+      "lasting_network": {
+        "micro": "PARTNERNETZWERK",
+        "headline": "Orte, an denen ihr euch wohlfühlt.",
+        "text": "Über 50 Hotels und Ferienziele in Deutschland — ausgewählt, damit deine Familie sich wirklich willkommen fühlt."
+      }
+    }
+  },
+  "mission": {
+    "title": "Gemeinsame Zeit ist kein Luxus. Sie gehört dir.",
+    "text": "Jede Familie verdient Erholung, Verbindung und Erinnerungen — unabhängig vom Kontostand. Wir glauben daran, dass gemeinsame Erlebnisse das Fundament einer starken Familie bilden. Deshalb machen wir Urlaub möglich, für alle.",
+    "image_alt": "Familie in der Natur mit einem künstlerischen Rahmen"
+  },
+  "stories": {
+    "title": "Was andere Familien sagen.",
+    "subline": "Echte Geschichten von Familien wie deiner — was ihre Woche verändert hat, und was sie mit nach Hause genommen haben.",
+    "items": [
+      {
+        "quote": "Wir hatten seit Jahren keinen Urlaub mehr zusammen gemacht. Diese Woche hat uns als Familie wieder zusammengebracht. Die Kinder reden heute noch davon.",
+        "name": "Familie Yilmaz",
+        "location": "Hamburg"
+      },
+      {
+        "quote": "Ich hätte nie gedacht, dass so etwas möglich ist. Die Organisation war perfekt, und wir haben uns die ganze Zeit unterstützt gefühlt. Ein echtes Geschenk.",
+        "name": "Familie Meier",
+        "location": "Berlin"
+      },
+      {
+        "quote": "Als alleinerziehende Mutter war ein Urlaub nur ein Traum. Jetzt ist er Wirklichkeit geworden. Meine Tochter hat zum ersten Mal das Meer gesehen.",
+        "name": "Sara K.",
+        "location": "München"
+      }
+    ]
+  },
+  "contact_home": {
+    "title": "Schreib uns. Wir schauen gemeinsam, was möglich ist.",
+    "text": "Du weißt noch nicht, ob du die Voraussetzungen erfüllst? Schreib uns trotzdem. Kein komplizierter Papierkram, kein Verhör. Nur eine kurze Nachricht — und wir melden uns bei dir.",
+    "form": {
+      "name": { "label": "Name", "placeholder": "Dein Name" },
+      "email": { "label": "E-Mail", "placeholder": "deine@email.de" },
+      "subject": {
+        "label": "Worum geht es?",
+        "default": "Bitte wählen",
+        "options": {
+          "application": "Bewerbung",
+          "question": "Frage",
+          "donation": "Spende",
+          "other": "Anderes"
+        }
+      },
+      "message": { "label": "Nachricht", "placeholder": "Was möchtest du uns mitteilen?" },
+      "submit": "Nachricht senden",
+      "sending": "Wird gesendet…",
+      "success_title": "Danke!",
+      "success_text": "Deine Nachricht ist bei uns angekommen. Wir melden uns bald bei dir."
+    }
+  },
+  "donate_page": {
+    "back": "Zurück",
+    "title": "Du kannst dazu beitragen, dass eine Familie Urlaub macht.",
+    "intro": "You&Family ist eine Initiative von Menschen, die selbst wissen, was gemeinsame Zeit bedeutet — Mütter, Väter, Familien. Wir sind noch am Anfang, aber wir glauben fest daran: Mit den richtigen Menschen an unserer Seite können wir das wirklich möglich machen. Wenn du Teil davon sein willst — egal ob mit einer Spende oder deiner Zeit — melde dich bei uns.",
+    "image_alt": "Familie in der Natur mit einem künstlerischen Rahmen",
+    "paths": {
+      "donate": {
+        "title": "Spenden",
+        "text": "Jeder Beitrag ermöglicht etwas Echtes. Deine Spende geht direkt in die Finanzierung von Familienurlauben. Wir sind transparent darüber, was damit passiert — immer."
+      },
+      "volunteer": {
+        "title": "Ehrenamt",
+        "text": "Kein Geld, aber Zeit? Auch das zählt. Wir suchen Menschen, die Familien begleiten, beraten oder einfach zuhören. Du musst kein Experte sein — du musst nur da sein wollen."
+      }
+    },
+    "contact": {
+      "title": "Schreib uns — wir melden uns bei dir.",
+      "form": {
+        "name": { "label": "Name", "placeholder": "Dein Name" },
+        "email": { "label": "E-Mail", "placeholder": "deine@email.de" },
+        "subject": {
+          "label": "Ich möchte…",
+          "default": "Bitte wählen",
+          "options": {
+            "donation": "Spenden",
+            "volunteer": "Ehrenamtlich mithelfen",
+            "question": "Mehr erfahren",
+            "other": "Anderes"
+          }
+        },
+        "message": { "label": "Nachricht", "placeholder": "Was möchtest du uns mitteilen?" },
+        "submit": "Nachricht senden",
+        "sending": "Wird gesendet…",
+        "success_title": "Danke!",
+        "success_text": "Deine Nachricht ist bei uns angekommen. Wir melden uns bald bei dir."
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Gemeinsame Zeit ist kein Luxus.",
+    "email": "info@youandfamily.de",
+    "nav": {
+      "numbers": "Zahlen",
+      "what_we_do": "Was wir tun",
+      "mission": "Mission",
+      "stories": "Familiengeschichten",
+      "contact": "Kontakt"
+    },
+    "copyright": "You&Family e.V."
+  }
+}

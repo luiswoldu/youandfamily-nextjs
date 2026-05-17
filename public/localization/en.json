@@ -1,0 +1,159 @@
+{
+  "metadata": {
+    "title": "You&Family — Time together isn't a luxury",
+    "description": "We support families in Germany to go on holiday together — even when it feels out of reach."
+  },
+  "navbar": {
+    "items": {
+      "what_we_do": "What we do",
+      "mission": "Mission",
+      "stories": "Family stories",
+      "contact": "Contact"
+    },
+    "donate": "Donate",
+    "open_menu": "Open menu"
+  },
+  "languages": {
+    "de": "Deutsch",
+    "en": "English",
+    "tr": "Türkçe",
+    "ar": "العربية"
+  },
+  "hero": {
+    "h1": "Your family deserves time together.",
+    "subline": "We support families in Germany to go on holiday together — even when it feels out of reach. Apply and let's see how we can help.",
+    "buttons": {
+      "apply": "Apply now",
+      "donate": "Donate"
+    },
+    "image_alt": "A happy family on holiday — children and parents walking through a picturesque town"
+  },
+  "numbers": {
+    "stats": [
+      { "value": "320+", "label": "Families supported" },
+      { "value": "12", "label": "Partner communities" },
+      { "value": "98%", "label": "Would recommend us" },
+      { "value": "2.8M", "label": "Children in Germany live in poverty" }
+    ]
+  },
+  "what_we_do": {
+    "title": "How we help families",
+    "subline": "Three pillars — one goal",
+    "pillars": {
+      "funded_vacations": {
+        "micro": "FUNDED VACATIONS",
+        "headline": "Travel without worrying.",
+        "text": "We cover accommodation, travel, and activities — fully, with no hidden conditions."
+      },
+      "personal_support": {
+        "micro": "PERSONAL SUPPORT",
+        "headline": "Someone is always there for you.",
+        "text": "From the first enquiry to your return home, we accompany your family with advice, coordination, and an open ear."
+      },
+      "lasting_network": {
+        "micro": "LASTING NETWORK",
+        "headline": "Connection that lasts beyond the holiday.",
+        "text": "We connect you with other families and local resources — so the positive energy lasts."
+      }
+    }
+  },
+  "mission": {
+    "title": "Time together isn't a luxury. It belongs to you.",
+    "text": "Every family deserves rest, connection, and memories — regardless of what's in your bank account. We believe shared experiences are the foundation of a strong family. That's why we make holidays possible, for everyone.",
+    "image_alt": "Family in nature with an artistic frame"
+  },
+  "stories": {
+    "title": "What other families say",
+    "subline": "Real stories from families like yours — what their week changed, and what they took home with them.",
+    "items": [
+      {
+        "quote": "We hadn't taken a holiday together in years. That week brought us back together as a family. The kids still talk about it today.",
+        "name": "The Yilmaz family",
+        "location": "Hamburg"
+      },
+      {
+        "quote": "I never thought something like this was possible. The organisation was perfect, and we felt supported the entire time. A real gift.",
+        "name": "The Meier family",
+        "location": "Berlin"
+      },
+      {
+        "quote": "As a single mother, a holiday was just a dream. Now it has become reality. My daughter saw the sea for the first time.",
+        "name": "Sara K.",
+        "location": "Munich"
+      }
+    ]
+  },
+  "contact_home": {
+    "title": "Write to us. We'll figure out together what's possible.",
+    "text": "Not sure if you qualify? Write to us anyway. No complicated paperwork, no interrogation. Just a short message — and we'll get back to you.",
+    "form": {
+      "name": { "label": "Name", "placeholder": "Your name" },
+      "email": { "label": "Email", "placeholder": "your@email.com" },
+      "subject": {
+        "label": "Subject",
+        "default": "Please choose",
+        "options": {
+          "application": "Application",
+          "question": "Question",
+          "donation": "Donation",
+          "other": "Other"
+        }
+      },
+      "message": { "label": "Message", "placeholder": "What would you like to tell us?" },
+      "submit": "Send message",
+      "sending": "Sending…",
+      "success_title": "Thank you!",
+      "success_text": "Your message has reached us. We'll get back to you soon."
+    }
+  },
+  "donate_page": {
+    "back": "Back",
+    "title": "You can be the reason a family goes on holiday.",
+    "intro": "You&Family was started by people who know from experience what time together means — mothers, fathers, families. We're still at the beginning, but we believe: with the right people beside us, we can make this real. If you want to be part of it — whether through a donation or your time — get in touch.",
+    "image_alt": "Family in nature with an artistic frame",
+    "paths": {
+      "donate": {
+        "title": "Donate",
+        "text": "Your financial support gives families a break they couldn't otherwise afford. Every contribution counts — large or small."
+      },
+      "volunteer": {
+        "title": "Volunteer",
+        "text": "Want to contribute your time and energy? We're looking for people who want to pitch in — with organising, support, or communication."
+      }
+    },
+    "contact": {
+      "title": "Write to us",
+      "form": {
+        "name": { "label": "Name", "placeholder": "Your name" },
+        "email": { "label": "Email", "placeholder": "your@email.com" },
+        "subject": {
+          "label": "Subject",
+          "default": "Please choose",
+          "options": {
+            "donation": "Donation",
+            "volunteer": "Volunteer",
+            "question": "Question",
+            "other": "Other"
+          }
+        },
+        "message": { "label": "Message", "placeholder": "What would you like to tell us?" },
+        "submit": "Send message",
+        "sending": "Sending…",
+        "success_title": "Thank you!",
+        "success_text": "Your message has reached us. We'll get back to you soon."
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Time together isn't a luxury.",
+    "email": "info@youandfamily.de",
+    "nav": {
+      "numbers": "Numbers",
+      "what_we_do": "What we do",
+      "mission": "Mission",
+      "stories": "Family stories",
+      "contact": "Contact"
+    },
+    "copyright": "You&Family e.V."
+  }
+}

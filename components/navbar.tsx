@@ -1,29 +1,29 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 import Link from "next/link"
-import { useRouter } from "next/navigation"
 import { Menu, X, ChevronDown } from "lucide-react"
+import { SUPPORTED_LANGUAGES, useTranslation, type Language } from "@/lib/i18n"
 
-const navItems = [
-  { label: "Was wir tun", href: "#what-we-do" },
-  { label: "Mission", href: "#mission" },
-  { label: "Familiengeschichten", href: "#stories" },
-  { label: "Kontakt", href: "#contact" },
-]
+const navItemKeys = [
+  { key: "what_we_do", href: "#what-we-do" },
+  { key: "mission", href: "#mission" },
+  { key: "stories", href: "#stories" },
+  { key: "contact", href: "#contact" },
+] as const
 
-const languages = [
-  { label: "Deutsch", code: "de" },
-  { label: "English", code: "en" },
-  { label: "Türkçe", code: "tr" },
-  { label: "العربية", code: "ar" },
+const languageOptions: { code: Language | "de" | "tr" | "ar"; labelKey: string }[] = [
+  { code: "de", labelKey: "languages.de" },
+  { code: "en", labelKey: "languages.en" },
+  { code: "tr", labelKey: "languages.tr" },
+  { code: "ar", labelKey: "languages.ar" },
 ]
 
 export function Navbar() {
+  const { t, lang, setLang } = useTranslation()
   const [mobileOpen, setMobileOpen] = useState(false)
   const [langOpen, setLangOpen] = useState(false)
-  const [activeLang, setActiveLang] = useState("Deutsch")
-  const router = useRouter()
 
   function scrollTo(href: string) {
     setMobileOpen(false)
@@ -34,23 +34,40 @@ export function Navbar() {
     }
   }
 
+  function selectLanguage(code: string) {
+    if (SUPPORTED_LANGUAGES.includes(code as Language)) {
+      setLang(code as Language)
+    }
+    setLangOpen(false)
+    setMobileOpen(false)
+  }
+
+  const activeLangLabel = t<string>(`languages.${lang}`)
+
   return (
     <header className="w-full bg-background">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between gap-6">
         {/* Logo */}
-        <Link href="/" className="text-2xl font-bold tracking-tight shrink-0 font-sans">
-          You&Family
+        <Link href="/" className="shrink-0" aria-label="You&Family">
+          <Image
+            src="/LOGO_FINAL.png"
+            alt="You&Family"
+            width={160}
+            height={40}
+            priority
+            className="h-10 w-auto"
+          />
         </Link>
 
         {/* Desktop nav */}
         <nav className="hidden lg:flex items-center gap-8">
-          {navItems.map((item) => (
+          {navItemKeys.map((item) => (
             <button
               key={item.href}
               onClick={() => scrollTo(item.href)}
               className="text-base font-sans text-foreground hover:opacity-60 transition-opacity cursor-pointer"
             >
-              {item.label}
+              {t(`navbar.items.${item.key}`)}
             </button>
           ))}
         </nav>
@@ -63,21 +80,18 @@ export function Navbar() {
               onClick={() => setLangOpen(!langOpen)}
               className="flex items-center gap-1 text-sm font-sans text-foreground hover:opacity-60 transition-opacity"
             >
-              {activeLang}
+              {activeLangLabel}
               <ChevronDown size={14} />
             </button>
             {langOpen && (
               <div className="absolute right-0 top-full mt-2 bg-background rounded-xl shadow-sm z-50 min-w-32 overflow-hidden">
-                {languages.map((lang) => (
+                {languageOptions.map((option) => (
                   <button
-                    key={lang.code}
-                    onClick={() => {
-                      setActiveLang(lang.label)
-                      setLangOpen(false)
-                    }}
+                    key={option.code}
+                    onClick={() => selectLanguage(option.code)}
                     className="w-full text-left px-4 py-2 text-sm font-sans hover:bg-card transition-colors"
                   >
-                    {lang.label}
+                    {t(option.labelKey)}
                   </button>
                 ))}
               </div>
@@ -90,7 +104,7 @@ export function Navbar() {
             className="px-5 py-2 rounded-full text-sm font-semibold font-sans"
             style={{ backgroundColor: "#ffffff", color: "#000000" }}
           >
-            Spenden
+            {t("navbar.donate")}
           </Link>
         </div>
 
@@ -98,7 +112,7 @@ export function Navbar() {
         <button
           className="lg:hidden"
           onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label="Menü öffnen"
+          aria-label={t("navbar.open_menu")}
         >
           {mobileOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -107,26 +121,23 @@ export function Navbar() {
       {/* Mobile menu */}
       {mobileOpen && (
         <div className="lg:hidden border-t border-border bg-background px-6 py-4 flex flex-col gap-4">
-          {navItems.map((item) => (
+          {navItemKeys.map((item) => (
             <button
               key={item.href}
               onClick={() => scrollTo(item.href)}
               className="text-left text-base font-sans text-foreground hover:opacity-60 transition-opacity"
             >
-              {item.label}
+              {t(`navbar.items.${item.key}`)}
             </button>
           ))}
           <div className="pt-2 border-t border-border flex flex-wrap gap-3">
-            {languages.map((lang) => (
+            {languageOptions.map((option) => (
               <button
-                key={lang.code}
-                onClick={() => {
-                  setActiveLang(lang.label)
-                  setMobileOpen(false)
-                }}
-                className={`text-sm font-sans hover:opacity-60 transition-opacity ${activeLang === lang.label ? "font-semibold" : ""}`}
+                key={option.code}
+                onClick={() => selectLanguage(option.code)}
+                className={`text-sm font-sans hover:opacity-60 transition-opacity ${lang === option.code ? "font-semibold" : ""}`}
               >
-                {lang.label}
+                {t(option.labelKey)}
               </button>
             ))}
           </div>
@@ -136,7 +147,7 @@ export function Navbar() {
             className="inline-block w-fit px-5 py-2 rounded-full text-sm font-semibold font-sans"
             style={{ backgroundColor: "#a477ff", color: "#ffffff" }}
           >
-            Spenden
+            {t("navbar.donate")}
           </Link>
         </div>
       )}
