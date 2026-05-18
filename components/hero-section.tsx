@@ -73,9 +73,9 @@ export function HeroSection() {
           <Image
             src="/images/bird-icon-blue.png"
             alt=""
-            width={420}
-            height={420}
-            className={`absolute top-[-3rem] left-[8%] w-20 md:w-24 lg:w-32 h-auto z-20 transition-opacity duration-[2500ms] ease-out ${
+            width={620}
+            height={620}
+            className={`absolute top-12 left-[8%] w-20 md:w-24 lg:w-32 h-auto z-20 transition-opacity duration-2500 ease-out ${
               isTextVisible ? "opacity-100" : "opacity-0"
             }`}
             style={{ transitionDelay: "600ms" }}

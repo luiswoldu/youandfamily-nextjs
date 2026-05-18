@@ -16,7 +16,7 @@ export default function DonatePage() {
     subject: "",
     message: "",
   })
-  const [status, setStatus] = useState<"idle" | "sending" | "sent">("idle")
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle")
 
   function handleChange(
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -27,9 +27,22 @@ export default function DonatePage() {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
     setStatus("sending")
-    await new Promise((r) => setTimeout(r, 1000))
-    setStatus("sent")
-    setForm({ name: "", email: "", subject: "", message: "" })
+
+    try {
+      const res = await fetch("/api/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...form, source: "donate" }),
+      })
+
+      if (!res.ok) throw new Error("Submission failed")
+
+      setStatus("sent")
+      setForm({ name: "", email: "", subject: "", message: "" })
+    } catch (err) {
+      console.error(err)
+      setStatus("error")
+    }
   }
 
   return (
@@ -62,7 +75,6 @@ export default function DonatePage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Donate card */}
           <div
             className="rounded-2xl p-8 flex flex-col gap-4"
             style={{ backgroundColor: "#f3effc" }}
@@ -78,7 +90,6 @@ export default function DonatePage() {
             </p>
           </div>
 
-          {/* Volunteer card */}
           <div
             className="rounded-2xl p-8 flex flex-col gap-4"
             style={{ backgroundColor: "#e6eaff" }}
@@ -115,6 +126,12 @@ export default function DonatePage() {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+              {status === "error" && (
+                <p className="text-base font-sans text-red-600 rounded-xl border border-red-200 bg-red-50 px-4 py-3">
+                  {t("donate_page.contact.form.error") ?? "Something went wrong. Please try again."}
+                </p>
+              )}
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div className="flex flex-col gap-2">
                   <label htmlFor="name" className="text-base font-semibold font-sans text-foreground">

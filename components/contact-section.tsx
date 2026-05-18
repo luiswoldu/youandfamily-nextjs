@@ -21,7 +21,6 @@ export function ContactSection() {
   useEffect(() => {
     const updateProgress = () => {
       if (!sectionRef.current) return
-
       const rect = sectionRef.current.getBoundingClientRect()
       const viewportHeight = window.innerHeight
       const rawProgress = (viewportHeight - rect.top) / (viewportHeight + rect.height)
@@ -68,10 +67,22 @@ export function ContactSection() {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
     setStatus("sending")
-    // Placeholder — wire up to /api/contact when backend is ready
-    await new Promise((r) => setTimeout(r, 1000))
-    setStatus("sent")
-    setForm({ name: "", email: "", subject: "", message: "" })
+
+    try {
+      const res = await fetch("/api/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...form, source: "contact" }),
+      })
+
+      if (!res.ok) throw new Error("Submission failed")
+
+      setStatus("sent")
+      setForm({ name: "", email: "", subject: "", message: "" })
+    } catch (err) {
+      console.error(err)
+      setStatus("error")
+    }
   }
 
   return (
@@ -83,7 +94,6 @@ export function ContactSection() {
     >
       {/* Decorative icons scattered around the section */}
       <div className="absolute inset-0 pointer-events-none">
-        {/* Top left - Car */}
         <Image
           src="/images/icons/car.png"
           alt=""
@@ -92,7 +102,6 @@ export function ContactSection() {
           className="absolute top-8 left-4 opacity-60 hidden md:block"
           style={createIconStyle(0)}
         />
-        {/* Middle right - Campfire */}
         <Image
           src="/images/icons/campfire.png"
           alt=""
@@ -101,7 +110,6 @@ export function ContactSection() {
           className="absolute top-1/2 -translate-y-1/2 right-6 opacity-60 hidden md:block"
           style={createIconStyle(-0.06)}
         />
-        {/* Bottom left - Waves */}
         <Image
           src="/images/icons/waves.png"
           alt=""
@@ -110,7 +118,6 @@ export function ContactSection() {
           className="absolute bottom-10 left-20 opacity-60 hidden md:block"
           style={createIconStyle(0.08)}
         />
-        {/* Top right - smaller Car */}
         <Image
           src="/images/icons/car.png"
           alt=""
@@ -119,7 +126,6 @@ export function ContactSection() {
           className="absolute top-20 right-1/3 opacity-50 hidden lg:block"
           style={createIconStyle(-0.12)}
         />
-        {/* Bottom right - Waves echo */}
         <Image
           src="/images/icons/waves.png"
           alt=""
@@ -129,6 +135,7 @@ export function ContactSection() {
           style={createIconStyle(0.04)}
         />
       </div>
+
       <div className="max-w-3xl mx-auto flex flex-col gap-10 relative z-10">
         <div className="flex flex-col gap-4">
           <h2 className="text-5xl md:text-7xl font-bold font-sans text-foreground text-balance">
@@ -144,13 +151,21 @@ export function ContactSection() {
             className="rounded-2xl p-10 text-center flex flex-col gap-3"
             style={{ backgroundColor: "#f3effc" }}
           >
-            <p className="text-3xl font-bold font-sans text-foreground">{t("contact_home.form.success_title")}</p>
+            <p className="text-3xl font-bold font-sans text-foreground">
+              {t("contact_home.form.success_title")}
+            </p>
             <p className="text-xl font-sans text-foreground">
               {t("contact_home.form.success_text")}
             </p>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+            {status === "error" && (
+              <p className="text-base font-sans text-red-600 rounded-xl border border-red-200 bg-red-50 px-4 py-3">
+                {t("contact_home.form.error") ?? "Something went wrong. Please try again."}
+              </p>
+            )}
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               <div className="flex flex-col gap-2">
                 <label htmlFor="name" className="text-base font-semibold font-sans text-foreground">
