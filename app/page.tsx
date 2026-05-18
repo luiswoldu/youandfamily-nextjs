@@ -12,9 +12,9 @@ export default function Home() {
     <main className="min-h-screen bg-background">
       <Navbar />
       <HeroSection />
-      <NumbersSection />
-      <WhatWeDoSection />
       <MissionSection />
+      <WhatWeDoSection />
+      <NumbersSection />
       <StoriesSection />
       <ContactSection />
       <Footer />

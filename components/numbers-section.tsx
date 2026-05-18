@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import { useEffect, useRef, useState } from "react"
+import { ChevronLeft, ChevronRight } from "lucide-react"
 import { useTranslation } from "@/lib/i18n"
 
 type Stat = { value: string; label: string }
@@ -11,6 +12,18 @@ export function NumbersSection() {
   const stats = t<Stat[]>("numbers.stats")
   const sectionRef = useRef<HTMLElement | null>(null)
   const [progress, setProgress] = useState(0)
+  const [activeIndex, setActiveIndex] = useState(0)
+
+  useEffect(() => {
+    if (stats.length > 0 && activeIndex >= stats.length) {
+      setActiveIndex(0)
+    }
+  }, [stats.length, activeIndex])
+
+  const goPrev = () =>
+    setActiveIndex((i) => (stats.length === 0 ? 0 : (i - 1 + stats.length) % stats.length))
+  const goNext = () =>
+    setActiveIndex((i) => (stats.length === 0 ? 0 : (i + 1) % stats.length))
 
   useEffect(() => {
     const updateProgress = () => {
@@ -86,7 +99,7 @@ export function NumbersSection() {
           alt=""
           width={180}
           height={180}
-          className="absolute bottom-12 left-16 opacity-60 hidden md:block"
+          className="absolute bottom-12 left-16 opacity-60 hidden md:block z-20"
           style={createIconStyle(0.08)}
         />
         {/* Bottom right - Fish */}
@@ -95,7 +108,7 @@ export function NumbersSection() {
           alt=""
           width={140}
           height={140}
-          className="absolute bottom-20 right-20 opacity-60 hidden md:block"
+          className="absolute bottom-20 right-20 opacity-60 hidden md:block z-20"
           style={createIconStyle(-0.12)}
         />
         {/* Middle right - Flowers */}
@@ -119,7 +132,11 @@ export function NumbersSection() {
       </div>
 
       <div className="max-w-6xl mx-auto relative z-10">
-        <div className="rounded-3xl p-10 md:p-16" style={{ backgroundColor: "#fbf7f5" }}>
+        {/* Desktop / tablet: horizontal grid */}
+        <div
+          className="hidden md:block rounded-3xl p-10 md:p-16"
+          style={{ backgroundColor: "#fbf7f5" }}
+        >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
             {stats.map((stat) => (
               <div key={stat.label} className="flex flex-col items-center text-center gap-2">
@@ -131,6 +148,70 @@ export function NumbersSection() {
                 </span>
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* Mobile: single-card carousel */}
+        <div className="md:hidden">
+          <div
+            className="rounded-3xl px-6 py-12"
+            style={{ backgroundColor: "#fbf7f5" }}
+          >
+            <div className="overflow-hidden">
+              <div
+                className="flex transition-transform duration-500 ease-out"
+                style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+              >
+                {stats.map((stat) => (
+                  <div
+                    key={stat.label}
+                    className="w-full shrink-0 flex flex-col items-center text-center gap-4 px-2"
+                  >
+                    <span className="text-6xl font-bold font-sans text-foreground leading-none">
+                      {stat.value}
+                    </span>
+                    <span className="text-lg font-sans text-foreground leading-relaxed">
+                      {stat.label}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-8 flex items-center gap-4">
+              <button
+                type="button"
+                onClick={goPrev}
+                aria-label="Previous statistic"
+                className="shrink-0 grid place-items-center w-10 h-10 rounded-full bg-foreground/5 hover:bg-foreground/10 transition-colors"
+              >
+                <ChevronLeft className="w-5 h-5 text-foreground" />
+              </button>
+
+              <div
+                className="flex-1 h-1 rounded-full bg-foreground/10 overflow-hidden"
+                role="progressbar"
+                aria-valuemin={1}
+                aria-valuemax={stats.length}
+                aria-valuenow={activeIndex + 1}
+              >
+                <div
+                  className="h-full rounded-full bg-foreground transition-all duration-500"
+                  style={{
+                    width: `${stats.length === 0 ? 0 : ((activeIndex + 1) / stats.length) * 100}%`,
+                  }}
+                />
+              </div>
+
+              <button
+                type="button"
+                onClick={goNext}
+                aria-label="Next statistic"
+                className="shrink-0 grid place-items-center w-10 h-10 rounded-full bg-foreground/5 hover:bg-foreground/10 transition-colors"
+              >
+                <ChevronRight className="w-5 h-5 text-foreground" />
+              </button>
+            </div>
           </div>
         </div>
       </div>
