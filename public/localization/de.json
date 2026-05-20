@@ -30,9 +30,9 @@
   },
   "numbers": {
     "stats": [
-      { "value": "350+", "label": "Familien unterstützt" },
-      { "value": "15%", "label": "Familien kann sich keinen Urlaub leisten" },
-      { "value": "67 %", "label": "Einkommensschwache Familien berichten von hohem Stress" },
+      { "value": "776€", "label": "brauchen Kinder für existenzsichernde Kindergrundsicherung" },
+      { "value": "15%", "label": "Kinder & Jugendlichen in Deutschland waren 2024 armutsgefährdet" },
+      { "value": "67%", "label": "Einkommensschwache Familien berichten von hohem Stress" },
       { "value": "2.8M", "label": "Kinder in Deutschland leben in Armut" }
     ]
   },
@@ -43,7 +43,7 @@
       "funded_vacations": {
         "micro": "GEFÖRDERTER URLAUB",
         "headline": "Reisen, ohne dir Sorgen zu machen.",
-        "text": "Wir übernehmen die Kosten für Unterkunft, Anreise und Aktivitäten — komplett, ohne versteckte Bedingungen."
+        "text": "Wir übernehmen die Kosten für Unterkunft, Anreise und Aktivitäten ohne versteckte Bedingungen."
       },
       "personal_support": {
         "micro": "FAMILIEN-UNTERSTÜTZUNG",
