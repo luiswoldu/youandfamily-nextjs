@@ -9,6 +9,7 @@ const navLinks = [
   { key: "mission", href: "#mission" },
   { key: "stories", href: "#stories" },
   { key: "contact", href: "#contact" },
+  { key: "impressum", href: "/impressum" },
 ] as const
 
 export function Footer() {

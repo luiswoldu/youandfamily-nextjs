@@ -152,8 +152,19 @@
       "what_we_do": "ماذا نفعل",
       "mission": "مهمتنا",
       "stories": "قصص العائلات",
-      "contact": "تواصل معنا"
+      "contact": "تواصل معنا",
+      "impressum": "بيانات النشر"
     },
     "copyright": "You&Family gGmbH"
+  },
+  "impressum_page": {
+    "back": "رجوع",
+    "title": "بيانات النشر",
+    "fields": {
+      "commercial_register": "السجل التجاري",
+      "tax_id": "الرقم الضريبي الألماني",
+      "represented_by": "يمثلها",
+      "contact_email": "البريد الإلكتروني للتواصل"
+    }
   }
 }

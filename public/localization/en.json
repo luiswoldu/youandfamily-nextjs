@@ -152,8 +152,19 @@
       "what_we_do": "What we do",
       "mission": "Mission",
       "stories": "Family stories",
-      "contact": "Contact"
+      "contact": "Contact",
+      "impressum": "Imprint"
     },
     "copyright": "You&Family gGmbH"
+  },
+  "impressum_page": {
+    "back": "Back",
+    "title": "Imprint",
+    "fields": {
+      "commercial_register": "Commercial Register",
+      "tax_id": "German tax ID",
+      "represented_by": "Represented by",
+      "contact_email": "Contact e-mail"
+    }
   }
 }

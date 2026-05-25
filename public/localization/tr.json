@@ -152,8 +152,19 @@
       "what_we_do": "Ne yapıyoruz",
       "mission": "Misyon",
       "stories": "Aile hikayeleri",
-      "contact": "İletişim"
+      "contact": "İletişim",
+      "impressum": "Künye"
     },
     "copyright": "You&Family gGmbH"
+  },
+  "impressum_page": {
+    "back": "Geri",
+    "title": "Künye",
+    "fields": {
+      "commercial_register": "Ticaret sicili",
+      "tax_id": "Alman vergi numarası",
+      "represented_by": "Temsil eden",
+      "contact_email": "İletişim e-postası"
+    }
   }
 }
