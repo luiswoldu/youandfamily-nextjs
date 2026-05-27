@@ -72,7 +72,7 @@ export function ContactSection() {
       const res = await fetch("/api/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...form, source: "contact" }),
+        body: JSON.stringify({ ...form, source: "apply" }),
       })
 
       if (!res.ok) throw new Error("Submission failed")

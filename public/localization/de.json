@@ -153,9 +153,31 @@
       "mission": "Mission",
       "stories": "Familiengeschichten",
       "contact": "Kontakt",
-      "impressum": "Impressum"
+      "impressum": "Impressum",
+      "privacy": "Datenschutz",
+      "cookie_preferences": "Cookie-Einstellungen"
     },
     "copyright": "You&Family gGmbH"
+  },
+  "cookie_consent": {
+    "title": "Wir respektieren deine Privatsphäre",
+    "message": "Wir verwenden notwendige Cookies, damit unsere Website funktioniert. Mit deiner Zustimmung nutzen wir zusätzlich Analyse-Cookies, um die Seite zu verbessern. Mehr dazu in unserer",
+    "privacy_link": "Datenschutzerklärung",
+    "accept_all": "Alle akzeptieren",
+    "reject_all": "Ablehnen",
+    "customize": "Einstellungen",
+    "save": "Auswahl speichern",
+    "always_on": "Immer aktiv",
+    "categories": {
+      "necessary": {
+        "title": "Notwendig",
+        "text": "Diese Cookies sind für den Betrieb der Seite erforderlich, z. B. für deine Spracheinstellung."
+      },
+      "analytics": {
+        "title": "Analyse",
+        "text": "Helfen uns zu verstehen, wie die Seite genutzt wird (Vercel Analytics). Personenbezogene Daten werden nicht weitergegeben."
+      }
+    }
   },
   "impressum_page": {
     "back": "Zurück",

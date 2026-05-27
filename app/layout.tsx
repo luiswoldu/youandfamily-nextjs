@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
-import { Analytics } from '@vercel/analytics/next'
 import { LanguageProvider } from '@/lib/i18n'
+import { ConsentProvider } from '@/lib/consent'
+import { ConditionalAnalytics } from '@/components/conditional-analytics'
+import { CookieConsent } from '@/components/cookie-consent'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -18,8 +20,11 @@ export default function RootLayout({
     <html lang="de" dir="ltr">
       <body className="font-sans antialiased">
         <LanguageProvider>
-          {children}
-          <Analytics />
+          <ConsentProvider>
+            {children}
+            <CookieConsent />
+            <ConditionalAnalytics />
+          </ConsentProvider>
         </LanguageProvider>
       </body>
     </html>

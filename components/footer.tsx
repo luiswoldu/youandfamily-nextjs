@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { useTranslation } from "@/lib/i18n"
+import { useConsent } from "@/lib/consent"
 
 const navLinks = [
   { key: "numbers", href: "#numbers" },
@@ -10,10 +11,12 @@ const navLinks = [
   { key: "stories", href: "#stories" },
   { key: "contact", href: "#contact" },
   { key: "impressum", href: "/impressum" },
+  { key: "privacy", href: "/datenschutz" },
 ] as const
 
 export function Footer() {
   const { t } = useTranslation()
+  const { reopen } = useConsent()
 
   return (
     <footer className="px-6 py-12 border-t border-border" style={{ backgroundColor: "#fbf7f5" }}>
@@ -30,6 +33,13 @@ export function Footer() {
               {t(`footer.nav.${link.key}`)}
             </Link>
           ))}
+          <button
+            type="button"
+            onClick={reopen}
+            className="hover:opacity-60 transition-opacity text-left"
+          >
+            {t("footer.nav.cookie_preferences")}
+          </button>
         </nav>
 
         <p className="text-sm font-sans text-foreground">
