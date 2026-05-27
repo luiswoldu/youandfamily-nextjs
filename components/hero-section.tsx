@@ -68,14 +68,14 @@ export function HeroSection() {
         </div>
 
         {/* Image - right side */}
-        <div className="relative z-0 w-full lg:absolute lg:right-[-8%] lg:top-1/2 lg:-translate-y-1/2 lg:w-[52%] flex justify-center lg:justify-end pointer-events-none">
+        <div className="relative z-20 w-full lg:absolute lg:right-[-8%] lg:top-1/2 lg:-translate-y-1/2 lg:w-[52%] flex justify-center lg:justify-end pointer-events-none">
           {/* Bird - above the left corner of the image (decoupled, own fade-in) */}
           <Image
             src="/images/bird-icon-blue.png"
             alt=""
-            width={620}
-            height={620}
-            className={`absolute top-12 left-[8%] w-20 md:w-24 lg:w-32 h-auto z-20 transition-opacity duration-2500 ease-out ${
+            width={1020}
+            height={1020}
+            className={`absolute z-30 top-2 left-[-10%] w-32 md:w-32 lg:w-52 h-auto transition-opacity duration-2500 ease-out ${
               isTextVisible ? "opacity-100" : "opacity-0"
             }`}
             style={{ transitionDelay: "600ms" }}
@@ -86,7 +86,7 @@ export function HeroSection() {
             alt=""
             width={180}
             height={120}
-            className={`absolute top-[-2.5rem] right-[2%] w-28 md:w-36 lg:w-44 h-auto z-20 transition-opacity duration-[2500ms] ease-out ${
+            className={`absolute top-[-2.5rem] right-[2%] w-28 md:w-36 lg:w-44 h-auto z-10 transition-opacity duration-[2500ms] ease-out ${
               isTextVisible ? "opacity-100" : "opacity-0"
             }`}
             style={{ transitionDelay: "1000ms" }}
