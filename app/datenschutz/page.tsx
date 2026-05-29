@@ -37,10 +37,11 @@ export default function DatenschutzPage() {
 
           <section className="flex flex-col gap-3">
             <h2 className="text-xl md:text-2xl font-bold font-sans">
-              2 Name und Kontaktdaten des Verantwortlichen und des Datenschutzbeauftragten
+              2 Name und Kontaktdaten des Verantwortlichen
             </h2>
             <p>
               Verantwortlicher: You&amp;Family Organisation gGmbH, Kurfürstendamm 66, 10707 Berlin, Deutschland
+              <br />
               E-Mail: family@youandfamily.de
             </p>
           </section>
@@ -79,9 +80,10 @@ export default function DatenschutzPage() {
             <h2 className="text-xl md:text-2xl font-bold font-sans">4 Rechtsgrundlagen</h2>
             <p>
               Die Verarbeitung personenbezogener Daten erfolgt gemäß DSGVO. Sofern nicht anders angegeben, gelten
-              folgende RechtsgrundlageO i.V.m. Art. 7 DSGVO
+              folgende Rechtsgrundlagen:
             </p>
             <ul className="list-disc pl-6 flex flex-col gap-1">
+              <li>Einwilligung: Art. 6 Abs. 1 lit. a i.V.m. Art. 7 DSGVO</li>
               <li>Vertragserfüllung: Art. 6 Abs. 1 lit. b DSGVO</li>
               <li>Rechtliche Verpflichtung: Art. 6 Abs. 1 lit. c DSGVO</li>
               <li>Berechtigte Interessen: Art. 6 Abs. 1 lit. f DSGVO</li>
@@ -116,7 +118,7 @@ export default function DatenschutzPage() {
             </ul>
             <p>
               In diesen Fällen erfolgt die Verarbeitung nur unter Einhaltung der Art. 44 ff. DSGVO, z. B. durch
-              Standardvertragsklauseln oder ein anerkanntes Dativeau.
+              Standardvertragsklauseln oder ein anerkanntes Datenschutzniveau.
             </p>
           </section>
 
@@ -145,7 +147,8 @@ export default function DatenschutzPage() {
             <p>
               Wir verwenden hauptsächlich Session-Cookies. Technisch notwendige Cookies sind für die Funktion der
               Website erforderlich und können nicht deaktiviert werden. Andere Cookies (z. B. Analyse oder Marketing)
-              können Sie über unser Consent-Tool steuern.
+              setzen wir nur nach Ihrer ausdrücklichen Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO sowie § 25 TDDDG
+              ein und können über unser Consent-Tool gesteuert werden.
             </p>
             <button
               type="button"
@@ -159,8 +162,8 @@ export default function DatenschutzPage() {
           <section className="flex flex-col gap-3">
             <h2 className="text-xl md:text-2xl font-bold font-sans">9 Kontaktaufnahme</h2>
             <p>
-              Bei Kontaktaufnahme (z. B. per E-Mail oder Telefon) werden Ihre Angaben g der Anfrage gemäß Art. 6 Abs. 1
-              lit. b DSGVO verarbeitet.
+              Bei Kontaktaufnahme (z. B. per E-Mail oder Telefon) werden Ihre Angaben zur Bearbeitung der Anfrage gemäß
+              Art. 6 Abs. 1 lit. b DSGVO verarbeitet.
             </p>
             <p>
               Die Daten werden gelöscht, sobald sie nicht mehr erforderlich sind, unter Berücksichtigung gesetzlicher
@@ -191,20 +194,32 @@ export default function DatenschutzPage() {
 
           <section className="flex flex-col gap-3">
             <h2 className="text-xl md:text-2xl font-bold font-sans">12 Google Analytics</h2>
-            <p>Diese Website nutzt Google Analytics, einen Webanalysedienst der Google Inc.</p>
             <p>
-              Google Analytics verwendet Cookies zur Analyse der Website-Nutzung. Die erzeugten Informationen werden
-              in der Regel an Server von übertragen.
+              Diese Website nutzt Google Analytics 4, einen Webanalysedienst der Google Ireland Limited, Gordon House,
+              Barrow Street, Dublin 4, Irland („Google“).
             </p>
             <p>
-              Wir verwenden Google Analytics mit IP-Anonymisierung. Die IP-Adresse wird innerhalb der EU bzw. des EWR
-              gekürzt, bevor sie übertragen wird.
+              Google Analytics verwendet Cookies und ähnliche Technologien zur Analyse der Website-Nutzung. Die
+              erzeugten Informationen werden in der Regel an Server von Google übertragen und dort gespeichert, auch in
+              den USA. Google LLC mit Sitz in den USA ist zertifiziert unter dem EU-US Data Privacy Framework und stellt
+              somit ein angemessenes Datenschutzniveau sicher (Art. 45 DSGVO).
             </p>
             <p>
-              Wir nutzen außerdem Funktionen wie demografische Merkmale zur Erstellung aggregierter Berichte.
+              Google Analytics wird auf dieser Website ausschließlich auf Grundlage Ihrer ausdrücklichen Einwilligung
+              gemäß Art. 6 Abs. 1 lit. a DSGVO sowie § 25 TDDDG eingesetzt. Ihre Einwilligung können Sie jederzeit mit
+              Wirkung für die Zukunft über unser Consent-Tool widerrufen.
             </p>
             <p>
-              Sie können die Datenerfassung durch Browser-Add-ons oder Opt-Out-Tools verhindern.
+              Die IP-Anonymisierung ist in Google Analytics 4 standardmäßig aktiviert. IP-Adressen werden vor der
+              Übertragung innerhalb der EU bzw. des EWR gekürzt.
+            </p>
+            <p>
+              Wir nutzen außerdem Funktionen wie demografische Merkmale zur Erstellung aggregierter Berichte. Die
+              Speicherdauer der durch Google Analytics erfassten Daten beträgt standardmäßig 14 Monate.
+            </p>
+            <p>
+              Sie können die Datenerfassung jederzeit durch entsprechende Einstellungen in unserem Consent-Tool oder
+              durch Installation des Browser-Add-ons zur Deaktivierung von Google Analytics verhindern.
             </p>
           </section>
 
@@ -229,7 +244,7 @@ export default function DatenschutzPage() {
               <li>Datenübertragbarkeit (Art. 20 DSGVO)</li>
               <li>Widerruf erteilter Einwilligungen (Art. 7 Abs. 3 DSGVO)</li>
               <li>Widerspruch (Art. 21 DSGVO)</li>
-              <li>Beschwerde bei einer AufsichtsbehördeO)</li>
+              <li>Beschwerde bei einer Aufsichtsbehörde (Art. 77 DSGVO)</li>
             </ul>
           </section>
 
