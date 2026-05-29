@@ -162,7 +162,7 @@
     "title": "Künye",
     "fields": {
       "commercial_register": "Ticaret sicili",
-      "tax_id": "Alman vergi numarası",
+      "tax_id": "KDV kimlik numarası",
       "represented_by": "Temsil eden",
       "contact_email": "İletişim e-postası"
     }

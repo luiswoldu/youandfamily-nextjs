@@ -40,11 +40,8 @@ export default function DatenschutzPage() {
               2 Name und Kontaktdaten des Verantwortlichen und des Datenschutzbeauftragten
             </h2>
             <p>
-              Verantwortlicher: You&amp;Family Vorwerkstraße 12 20357 Hamburg E-Mail: info@youandfamily.de
-            </p>
-            <p>
-              Datenschutzbeauftragter: Graf Consultings GmbH Karwendelstraße 7 86949 Windach E-Mail:
-              datenschutz@youandfamily.de
+              Verantwortlicher: You&amp;Family Organisation gGmbH, Kurfürstendamm 66, 10707 Berlin, Deutschland
+              E-Mail: family@youandfamily.de
             </p>
           </section>
 
@@ -274,7 +271,7 @@ export default function DatenschutzPage() {
       <footer className="px-6 py-10 border-t border-border mt-8" style={{ backgroundColor: "#fff4f0" }}>
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-sm font-sans text-foreground">
-            &copy; {new Date().getFullYear()} You&amp;Family gGmbH
+            &copy; {new Date().getFullYear()} You&amp;Family Organisation gGmbH
           </p>
         </div>
       </footer>

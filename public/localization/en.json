@@ -162,7 +162,7 @@
     "title": "Imprint",
     "fields": {
       "commercial_register": "Commercial Register",
-      "tax_id": "German tax ID",
+      "tax_id": "VAT identification number",
       "represented_by": "Represented by",
       "contact_email": "Contact e-mail"
     }

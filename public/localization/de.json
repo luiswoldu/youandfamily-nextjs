@@ -184,7 +184,7 @@
     "title": "Impressum",
     "fields": {
       "commercial_register": "Handelsregister",
-      "tax_id": "Steuernummer",
+      "tax_id": "Umsatzsteuer-Identifikationsnummer",
       "represented_by": "Vertretungsberechtigt",
       "contact_email": "Kontakt-E-Mail"
     }

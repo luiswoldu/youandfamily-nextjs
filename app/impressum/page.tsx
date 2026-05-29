@@ -28,35 +28,39 @@ export default function ImpressumPage() {
 
         <div className="flex flex-col gap-6 text-base md:text-lg font-sans text-foreground leading-relaxed">
           <div>
-            <p>You&amp;Family gGmbH</p>
+            <p>You&amp;Family Organisation gGmbH</p>
             <p>Kurfürstendamm 66</p>
             <p>10707 Berlin</p>
-          </div>
-
-          <div>
-            <p>
-              <span className="font-semibold">{t("impressum_page.fields.commercial_register")}:</span>{" "}
-              Amtsgericht Charlottenburg: HRB 266237
-            </p>
-            <p>
-              <span className="font-semibold">{t("impressum_page.fields.tax_id")}:</span>{" "}
-              27/602/50392
-            </p>
+            <p>Deutschland</p>
           </div>
 
           <div>
             <p>
               <span className="font-semibold">{t("impressum_page.fields.represented_by")}:</span>{" "}
-              Younes Ouaqasse
+              Geschäftsführung: Friederike Ouaqasse
             </p>
           </div>
 
           <div>
             <p>
               <span className="font-semibold">{t("impressum_page.fields.contact_email")}:</span>{" "}
-              <a href="mailto:hello@youandcompany.de" className="underline hover:opacity-60 transition-opacity">
-                hello@youandcompany.de
+              <a href="mailto:family@youandfamily.de" className="underline hover:opacity-60 transition-opacity">
+                family@youandfamily.de
               </a>
+            </p>
+          </div>
+
+          <div>
+            <p>
+              <span className="font-semibold">Registergericht:</span> Berlin-Charlottenburg
+            </p>
+            <p>
+              <span className="font-semibold">{t("impressum_page.fields.commercial_register")}:</span>{" "}
+              HRB 282661 B
+            </p>
+            <p>
+              <span className="font-semibold">{t("impressum_page.fields.tax_id")} gemäß § 27a UStG:</span>{" "}
+              DE 459783422
             </p>
           </div>
         </div>
