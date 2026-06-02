@@ -157,6 +157,15 @@
     },
     "copyright": "You&Family gGmbH"
   },
+  "quote": {
+    "title": "About us",
+    "paragraphs": [
+      "As a mother, I know how precious shared family time is. That is exactly why I founded You&Family.",
+      "I want families to experience a few days when the worries of everyday life are not at the centre. Days when they can breathe freely. Days when it does not matter what is currently difficult — only that they are together.",
+      "Because the most beautiful memories are not created through material things. They are created in shared moments, in laughter, in conversation, in closeness. These are the moments that give families strength and often stay with them for a lifetime.",
+      "With You&Family, we want to give families exactly these moments. Not because they can change everything, but because they are sometimes exactly what families need: time together."
+    ]
+  },
   "impressum_page": {
     "back": "Back",
     "title": "Imprint",

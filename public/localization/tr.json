@@ -157,6 +157,15 @@
     },
     "copyright": "You&Family gGmbH"
   },
+  "quote": {
+    "title": "Hakkımızda",
+    "paragraphs": [
+      "Bir anne olarak, ailecek birlikte geçirilen zamanın ne kadar değerli olduğunu biliyorum. İşte tam da bu yüzden You&Family'yi kurdum.",
+      "Ailelerin günlük yaşamın kaygılarının merkeze almadığı birkaç gün yaşamalarını istiyorum. Nefes alabilecekleri günler. Neyin zor olduğunun değil, yalnızca birlikte olmanın önemli olduğu günler.",
+      "Çünkü en güzel anılar maddi şeylerle değil, paylaşılan anlarda, gülüşlerde, sohbetlerde, birbirine yakınlıkta oluşur. İşte bu anlar ailelere güç verir ve çoğu zaman bir ömür boyunca hatırda kalır.",
+      "You&Family ile ailelere tam olarak bu tür anları yaşatmak istiyoruz. Her şeyi değiştireceği için değil, ama bazen ailelerin tam ihtiyacı olan şey bu olduğu için: birlikte zaman geçirmek."
+    ]
+  },
   "impressum_page": {
     "back": "Geri",
     "title": "Künye",

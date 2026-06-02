@@ -4,6 +4,7 @@ import { NumbersSection } from "@/components/numbers-section"
 import { WhatWeDoSection } from "@/components/what-we-do-section"
 import { MissionSection } from "@/components/mission-section"
 import { StoriesSection } from "@/components/stories-section"
+import { QuoteSection } from "@/components/quote-section"
 import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
 
@@ -16,6 +17,7 @@ export default function Home() {
       <WhatWeDoSection />
       <NumbersSection />
       {/* <StoriesSection /> */}
+      <QuoteSection />
       <ContactSection />
       <Footer />
     </main>

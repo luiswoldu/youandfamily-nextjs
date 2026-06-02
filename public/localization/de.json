@@ -179,6 +179,15 @@
       }
     }
   },
+  "quote": {
+    "title": "Über uns",
+    "paragraphs": [
+      "Als Mutter weiß ich, wie wertvoll gemeinsame Zeit als Familie ist. Genau deshalb habe ich You&Family gegründet.",
+      "Ich wünsche mir, dass Familien ein paar Tage erleben dürfen, in denen nicht die Sorgen des Alltags im Mittelpunkt stehen. Tage, an denen sie einmal durchatmen können. Tage, an denen nicht zählt, was gerade schwierig ist, sondern nur, dass sie zusammen sind.",
+      "Denn die schönsten Erinnerungen entstehen nicht durch materielle Dinge. Sie entstehen in gemeinsamen Momenten, im Lachen, in Gesprächen, in der Nähe zueinander. Es sind diese Augenblicke, die Familien Kraft geben und oft ein Leben lang in Erinnerung bleiben.",
+      "Mit You&Family möchten wir Familien genau solche Momente schenken. Nicht, weil sie alles verändern können, sondern weil sie manchmal genau das sind, was Familien brauchen: Zeit miteinander."
+    ]
+  },
   "impressum_page": {
     "back": "Zurück",
     "title": "Impressum",
