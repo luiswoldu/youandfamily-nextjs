@@ -22,6 +22,9 @@ export function QuoteSection() {
                 {paragraph}
               </p>
             ))}
+            <p className="text-lg font-sans text-foreground leading-relaxed mt-8">
+              Friederike Ouaqasse, Gründerin You&amp;Family
+            </p>
           </div>
         </div>
       </div>
