@@ -10,8 +10,8 @@ const supabase = createClient<Database>(
 )
 
 const RESEND_API_KEY = process.env.RESEND_API_KEY
-const FROM_EMAIL = process.env.FROM_EMAIL ?? "noreply@youandfamily.org"
-const ADMIN_EMAIL = process.env.ADMIN_EMAIL ?? "hello@youandfamily.org"
+const FROM_EMAIL = process.env.FROM_EMAIL ?? "noreply@youandfamily.com"
+const ADMIN_EMAIL = process.env.ADMIN_EMAIL ?? "hello@youandfamily.com"
 
 interface SubmitBody {
   source: SubmissionSource
@@ -107,11 +107,11 @@ async function sendConfirmationEmail({
   await resend({
     from: FROM_EMAIL,
     to: [email],
-    subject: `We received your ${sourceLabel} — You & Family`,
+    subject: `Wir haben deine ${sourceLabel} erhalten — You & Family`,
     html: `
-      <p>Hi ${name},</p>
-      <p>Thank you for reaching out! We've received your ${sourceLabel} regarding "<strong>${subject}</strong>" and will get back to you as soon as possible.</p>
-      <p>With warmth,<br/>The You & Family team</p>
+<p>Hallo ${name},</p>
+<p>vielen Dank für deine Nachricht! Wir haben deine ${sourceLabel} zum Thema „<strong>${subject}</strong>“ erhalten und werden uns so schnell wie möglich bei dir melden.</p>
+<p>Herzliche Grüße<br/>Dein You & Family Team</p>
     `,
   })
 }
