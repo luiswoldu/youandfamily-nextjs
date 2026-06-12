@@ -37,9 +37,9 @@ export function HeroSection() {
       style={{ backgroundColor: "#fff4f0" }}
     >
       <div className="relative max-w-7xl mx-auto w-full flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
-        {/* Text content - left side */}
+        {/* Text content - left side (right side in RTL) */}
         <div
-          className={`relative z-10 w-full lg:w-1/2 flex flex-col gap-7 text-center lg:text-left transition-all duration-1000 ease-out ${
+          className={`relative z-10 w-full lg:w-1/2 flex flex-col gap-7 text-center lg:text-left rtl:lg:text-right transition-all duration-1000 ease-out ${
             isTextVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           }`}
         >
@@ -49,7 +49,7 @@ export function HeroSection() {
           <p className="text-xl md:text-2xl font-sans text-foreground max-w-xl leading-tight text-pretty">
             {t("hero.subline")}
           </p>
-          <div className="flex flex-col sm:flex-row items-center lg:items-start gap-4 mt-2">
+          <div className="flex flex-col sm:flex-row items-center lg:items-start rtl:lg:items-end gap-4 mt-2">
             <button
               onClick={scrollToContact}
               className="px-8 py-4 rounded-full text-xl font-semibold font-sans transition-opacity hover:opacity-80"
@@ -67,15 +67,15 @@ export function HeroSection() {
           </div>
         </div>
 
-        {/* Image - right side */}
-        <div className="relative z-20 w-full lg:absolute lg:right-[-8%] lg:top-1/2 lg:-translate-y-1/2 lg:w-[52%] flex justify-center lg:justify-end pointer-events-none">
+        {/* Image - right side (left side in RTL) */}
+        <div className="relative z-20 w-full lg:absolute lg:right-[-8%] rtl:lg:right-auto rtl:lg:left-[-8%] lg:top-1/2 lg:-translate-y-1/2 lg:w-[52%] flex justify-center lg:justify-end rtl:lg:justify-start pointer-events-none">
           {/* Bird - above the left corner of the image (decoupled, own fade-in) */}
           <Image
             src="/images/bird-icon-blue.png"
             alt=""
             width={1020}
             height={1020}
-            className={`absolute z-30 top-2 left-[-10%] w-32 md:w-32 lg:w-52 h-auto transition-opacity duration-2500 ease-out ${
+            className={`absolute z-30 top-2 left-[-10%] rtl:left-auto rtl:right-[-10%] w-32 md:w-32 lg:w-52 h-auto transition-opacity duration-2500 ease-out ${
               isTextVisible ? "opacity-100" : "opacity-0"
             }`}
             style={{ transitionDelay: "600ms" }}
@@ -86,7 +86,7 @@ export function HeroSection() {
             alt=""
             width={180}
             height={120}
-            className={`absolute top-[-2.5rem] right-[2%] w-28 md:w-36 lg:w-44 h-auto z-10 transition-opacity duration-[2500ms] ease-out ${
+            className={`absolute top-[-2.5rem] right-[2%] rtl:right-auto rtl:left-[2%] w-28 md:w-36 lg:w-44 h-auto z-10 transition-opacity duration-[2500ms] ease-out ${
               isTextVisible ? "opacity-100" : "opacity-0"
             }`}
             style={{ transitionDelay: "1000ms" }}
