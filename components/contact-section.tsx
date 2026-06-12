@@ -119,14 +119,6 @@ export function ContactSection() {
           style={createIconStyle(0.08)}
         />
         <Image
-          src="/images/icons/car.png"
-          alt=""
-          width={130}
-          height={100}
-          className="absolute top-20 right-1/3 opacity-50 hidden lg:block"
-          style={createIconStyle(-0.12)}
-        />
-        <Image
           src="/images/icons/waves.png"
           alt=""
           width={160}
