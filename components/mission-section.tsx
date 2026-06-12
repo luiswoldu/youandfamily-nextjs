@@ -52,9 +52,9 @@ export function MissionSection() {
             <Image
               src="/images/icons/flowers.png"
               alt=""
-              width={1008}
-              height={1008}
-              className="absolute right-[-40%] top-1/2 -translate-y-1/2 w-[240%] h-auto z-70 pointer-events-none opacity-90"
+              width={808}
+              height={808}
+              className="absolute right-[-54%] top-[28%] -translate-y-1/2 w-[220%] h-auto z-70 pointer-events-none opacity-90"
             />
             <Image
               src="/images/IMAGE_4.png"
@@ -69,7 +69,7 @@ export function MissionSection() {
             className={`text-2xl md:text-3xl font-sans text-foreground leading-tight text-pretty max-w-2xl transition-all duration-1000 ease-out ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
-            style={{ transitionDelay: "1800ms" }}
+            style={{ transitionDelay: "1000ms" }}
           >
             {t("mission.text")}
           </p>
