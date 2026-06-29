@@ -11,7 +11,7 @@ const supabase = createClient<Database>(
 
 const RESEND_API_KEY = process.env.RESEND_API_KEY
 const FROM_EMAIL = process.env.FROM_EMAIL ?? "noreply@youandfamily.com"
-const ADMIN_EMAIL = process.env.ADMIN_EMAIL ?? "hello@youandfamily.com"
+const ADMIN_EMAIL = process.env.ADMIN_EMAIL ?? "family@youandfamily.de"
 
 interface SubmitBody {
   source: SubmissionSource
@@ -129,17 +129,44 @@ async function sendAdminNotification({
   message: string
   source: SubmissionSource
 }) {
+  const sourceLabel =
+    source === "apply" ? "Bewerbung" : source === "donate" ? "Spendenanfrage" : "Kontaktanfrage"
+
   await resend({
     from: FROM_EMAIL,
     to: [ADMIN_EMAIL],
-    subject: `[${source.toUpperCase()}] New submission from ${name}`,
+    subject: `[${sourceLabel}] Neue Nachricht von ${name}`,
     html: `
-      <p><strong>Source:</strong> ${source}</p>
-      <p><strong>Name:</strong> ${name}</p>
-      <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
-      <p><strong>Subject:</strong> ${subject}</p>
-      <p><strong>Message:</strong></p>
-      <blockquote>${message.replace(/\n/g, "<br/>")}</blockquote>
+      <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px;">
+        <h2 style="margin:0 0 20px;font-size:20px;color:#1f1f1f;">Neue ${sourceLabel} über das Kontaktformular</h2>
+        <table style="width:100%;border-collapse:collapse;font-size:15px;color:#374151;">
+          <tr>
+            <td style="padding:8px 12px;background:#f9fafb;border-radius:6px;font-weight:600;width:120px;">Formular</td>
+            <td style="padding:8px 12px;">${sourceLabel}</td>
+          </tr>
+          <tr>
+            <td style="padding:8px 12px;font-weight:600;">Name</td>
+            <td style="padding:8px 12px;">${name}</td>
+          </tr>
+          <tr>
+            <td style="padding:8px 12px;background:#f9fafb;border-radius:6px;font-weight:600;">E-Mail</td>
+            <td style="padding:8px 12px;background:#f9fafb;border-radius:6px;">
+              <a href="mailto:${email}" style="color:#7c3aed;">${email}</a>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:8px 12px;font-weight:600;">Betreff</td>
+            <td style="padding:8px 12px;">${subject}</td>
+          </tr>
+        </table>
+        <div style="margin-top:20px;">
+          <p style="font-weight:600;font-size:15px;color:#374151;margin-bottom:8px;">Nachricht:</p>
+          <div style="background:#f3f4f6;border-left:4px solid #a477ff;border-radius:0 8px 8px 0;padding:16px;font-size:15px;color:#1f1f1f;white-space:pre-wrap;">${message.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</div>
+        </div>
+        <p style="margin-top:24px;font-size:13px;color:#9ca3af;">
+          Du kannst direkt auf diese E-Mail antworten oder <a href="mailto:${email}" style="color:#7c3aed;">${email}</a> kontaktieren.
+        </p>
+      </div>
     `,
   })
 }
